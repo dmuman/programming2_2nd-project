@@ -41,6 +41,11 @@ class Path(UserList):
         print('Current DFS path:', [str(node) for node in path], 'with total distance:', totalDistance)
         if start == end:
             return path, totalDistance
+        # TODO
+        # the problem is now here
+        # edge is not the Edge, but two nodes from
+        # the Digraph class.
+        # we need to figure out how to change that
         for edge in graph.edgesFrom(start):
             print(type(edge))
             node = edge.getDestination()
