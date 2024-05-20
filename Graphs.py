@@ -34,11 +34,20 @@ class Digraph:
         """
         return self._edges[node]
     
+    def edgesFrom(self, node):
+        """
+        
+        """
+        return self._edges[node]
+    
     def hasNode(self, node):
         """
         
         """
         return node in self._nodes
+    
+    def getNodes(self):
+        return self._nodes
     
     def __str__(self):
         """
