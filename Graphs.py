@@ -1,4 +1,4 @@
-from NodesEdges import Edge
+from NodesEdges import Edge, WeightedEdge
 
 class Digraph:
     """
@@ -17,28 +17,33 @@ class Digraph:
         else:
             self._nodes.append(node)
             self._edges[node] = []
+            # self._edges.append(Edge(node, ))
 
     def addEdge(self, edge):
         """
-        
+        Edge is a WeightedEdge
         """
         source = edge.getSource()
         destination = edge.getDestination()
+        weight = edge.getWeight()
         if not (source in self._nodes and destination in self._nodes):
             raise ValueError("Node not in graph")
-        self._edges[source].append(destination)
+        self._edges[source].append([destination, weight])
+        # self._edges.append()
 
     def childrenOf(self, node):
         """
         
         """
+        # for child in self._edges[node]:
+        #     return child[0]
         return self._edges[node]
     
-    def edgesFrom(self, node):
-        """
-        
-        """
-        return self._edges[node]
+    def weightOfEdge(self, node):
+        for child in self._edges[node]:
+            return child[1]
+        # return self._nodes[node][1]
+
     
     def hasNode(self, node):
         """
@@ -49,27 +54,24 @@ class Digraph:
     def getNodes(self):
         return self._nodes
     
+    def getEdges(self):
+        return self._edges
+    
     def __str__(self):
         """
         
         """
         result = ''
         for source in self._nodes:
-            for destination in self._edges[source]:
-                result = (result + source.getName() + '->' 
-                          + destination.getName() + '\n')
+            for destination, weight in self._edges[source]:
+                result = (f'{result} {source.getName()} -> {destination.getName()} with weight of {weight} \n')
         return result[:-1]
     
     def __repr__(self):
         """
         
         """
-        result = ''
-        for source in self._nodes:
-            for destination in self._edges[source]:
-                result = (result + source.getName() + '->' 
-                          + destination.getName() + '\n')
-        return result[:-1]
+        return self.__str__()
         
 class Graph(Digraph):
     """

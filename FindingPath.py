@@ -27,7 +27,55 @@ class Path(UserList):
         """
         return self._path
 
-    def DFS(self, graph, start, end, path, shortest, totalDistance = 0.0):
+    # def DFS(self, graph, start, end, path, shortest, totalDistance = 0.0):
+    #     """
+    #     Requires:
+    #     graph a Digraph;
+    #     start and end nodes;
+    #     path and shortest lists of nodes
+    #     Ensures:
+    #     a shortest path from start to end in graph
+    #     """
+    #     path = path + [start]
+    #     # for node in path:
+    #     #     print(type(node))
+    #     print(path)
+    #     print('Current DFS path:', [str(node) for node in path], 'with total distance:', totalDistance)
+    #     if start == end:
+    #         return path, totalDistance
+    #     # bestDistance = 0.0
+    #     for node, distance in graph.childrenOf(start):
+    #             print(f'children: {node}, dist: {distance}')
+    #         # edge = WeightedEdge()
+    #             if node not in path: #avoid cycles
+    #                 newDistance = totalDistance + distance
+    #                 print(newDistance)
+    #                 print('short', shortest)
+    #                 if shortest == None or newDistance < shortest[1]:
+    #                 # if shortest == None or len(path) < len(shortest):
+    #                     print('shortest', shortest)
+    #                     newPath, newTotalDistance = self.DFS(graph, node, end, path, shortest, newDistance)
+    #                     if newPath != None:
+    #                         shortest = (newPath, newTotalDistance)
+    #                         # print('shortest', shortest)
+    #     return shortest
+    #     # TODO
+    #     # the problem is now here
+    #     # edge is not the Edge, but two nodes from
+    #     # the Digraph class.
+    #     # we need to figure out how to change that
+    #     # for edge in graph.edgesFrom(start):
+    #     #     print(type(edge))
+    #     #     node = edge.getDestination()
+    #     #     if node not in path:  # avoid cycles
+    #     #         distance = totalDistance + edge.getWeight()
+    #     #         if shortest is None or distance < shortest[1]:
+    #     #             newPath, newDistance = self.DFS(graph, node, end, path, shortest, distance)
+    #     #             if newPath is not None:
+    #     #                 shortest = (newPath, newDistance)
+    #     # return shortest
+
+    def DFS(self, graph, start, end, path, shortest, totalDistance=0.0):
         """
         Requires:
         graph a Digraph;
@@ -37,24 +85,25 @@ class Path(UserList):
         a shortest path from start to end in graph
         """
         path = path + [start]
-        print(path)
+        # print(path)
         print('Current DFS path:', [str(node) for node in path], 'with total distance:', totalDistance)
+        
         if start == end:
             return path, totalDistance
-        # TODO
-        # the problem is now here
-        # edge is not the Edge, but two nodes from
-        # the Digraph class.
-        # we need to figure out how to change that
-        for edge in graph.edgesFrom(start):
-            print(type(edge))
-            node = edge.getDestination()
+
+        for node, distance in graph.childrenOf(start):
+            # print(f'children: {node}, dist: {distance}')
             if node not in path:  # avoid cycles
-                distance = totalDistance + edge.getWeight()
-                if shortest is None or distance < shortest[1]:
-                    newPath, newDistance = self.DFS(graph, node, end, path, shortest, distance)
-                    if newPath is not None:
-                        shortest = (newPath, newDistance)
+                newDistance = totalDistance + distance
+                # print(newDistance)
+                # print('short', shortest)
+                if shortest is None or newDistance < shortest[1]:
+                    # print('shortest', shortest)
+                    result = self.DFS(graph, node, end, path, shortest, newDistance)
+                    if result is not None:
+                        newPath, newTotalDistance = result
+                        shortest = (newPath, newTotalDistance)
+        
         return shortest
     
     def search(self, graph, start, end):
@@ -107,11 +156,16 @@ def testSP():
     else:
         print('No path found')
 
+    # print(g)
+    # print(g._edges)
 
-    # for g in g.getNodes():
-    #     print(type(g))
-    # for node in nodes:
-    #     print(type(node))
+    # # for g in g.getNodes():
+    # #     print(type(g))
+    # # for node in nodes:
+    # #     print(type(node))
+
+    # for edge in g.getEdges():
+    #     print(edge)
 
 
 testSP()

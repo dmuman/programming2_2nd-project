@@ -87,8 +87,7 @@ class WeightedEdge(Edge):
         """
         
         """
-        self._source = source
-        self._destination = destination
+        super().__init__(source, destination)
         self._weight = weight
 
     def setWeight(self, weight):
@@ -109,3 +108,9 @@ class WeightedEdge(Edge):
         """
         return (f'{self._source.getName()} -> ({self._weight})' + 
                 f'{self._destination.getName()}')
+    
+    def __repr__(self):
+        """
+        
+        """
+        return self.__str__()
