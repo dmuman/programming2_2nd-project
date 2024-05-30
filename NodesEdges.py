@@ -2,11 +2,12 @@ class Node:
     """
     
     """
-    def __init__(self, name):
+    def __init__(self, name, title):
         """
         
         """
         self._name = name
+        self._title = title
     
     def setName(self, name):
         """
@@ -14,23 +15,29 @@ class Node:
         """
         self._name = name
 
+    def setTitle(self, title):
+        self._title = title
+
     def getName(self):
         """
         
         """
         return self._name
-    
+
+    def getTitle(self):
+        return self._title
+
     def __str__(self):
         """
         
         """
-        return self._name
+        return str((self._name, self._title))
     
     def __repr__(self):
         """
         
         """
-        return self._name
+        return self.__str__()
     
 class Edge:
     """
@@ -83,12 +90,12 @@ class WeightedEdge(Edge):
     """
     
     """
-    def __init__(self, source, destination, weight = 1.0):
+    def __init__(self, source, destinationWeight):
         """
         
         """
-        super().__init__(source, destination)
-        self._weight = weight
+        super().__init__(source, destinationWeight[0])
+        self._weight = destinationWeight[1]
 
     def setWeight(self, weight):
         """
