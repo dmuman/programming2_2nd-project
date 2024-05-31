@@ -1,61 +1,69 @@
-from NodesEdges import *
-from Graphs import *
+# 2023-2024 Programacao 2 LTI
+# Grupo 31
+# 59348 Dmytro Umanskyi
+# 62228 Oujie Wu
+
+from Node import Node
+from Graph import Graph
+from WeightedEdge import WeightedEdge
 
 def readFromNetworkFiles(filename):
+    """
+    
+    """
+    graph = Graph()
+    nodes = {}
+
     with open(filename, 'r', encoding='utf-8-sig') as inFile:
         lines = inFile.readlines()
-        
-        data = []
+
         for line in lines[1:]:  # skip the header
             line = line.strip()
             if line:
-                parts = line.split(", ", 2)  # split only on the first two commas
-                if len(parts) == 3:
-                    id, name, connected = parts
+                linesInfo = line.split(", ", 2)  # split only on the first two commas
+                if len(linesInfo) == 3:
+                    id, name, connected = linesInfo
                     connected = connected.strip("[]")  # remove the square brackets
-                    connectedList = []
-                    
-                    # Manually parse the connected_str to extract tuples
+
+                    if id not in nodes:
+                        node = Node(id, name)
+                        nodes[id] = node
+                        graph.addNode(node)
+                    else:
+                        nodes[id].setTitle(name)
+
+                    source = nodes[id]
+
                     if connected:
                         connections = connected.split("), (")
                         for connection in connections:
                             connection = connection.strip("()")  # remove parentheses
-                            children, distance = connection.split(", ")
-                            connectedList.append((children, int(distance)))
-                    
-                    data.append([id, name, connectedList])
-        
-        return data
+                            children, time = connection.split(", ")
+                            time = int(time)
 
+                            if children not in nodes:
+                                childNode = Node(children, "")
+                                nodes[children] = childNode
+                                graph.addNode(childNode)
 
-nodes = []
-connectedList = []
-g = Digraph()
-for data in readFromNetworkFiles('myLevadasNetwork.txt'):
-    # dataLst = list(data[2])
-    # print(data)
-    # print(dataLst)
-    name, title, connected = data
-    nodes.append(Node(name, title))
-    connectedList.append(connected)
-    # print(name, title, connectedList)
+                            destination = nodes[children]
+                            edge = WeightedEdge(source, destination, time)
+                            graph.addEdge(edge)
 
-for n in nodes:
-    g.addNode(n)
+    return graph
 
-for i in range(len(connectedList)):
-    print(connectedList[i])
-    g.addEdge(WeightedEdge(nodes[i], ))
-
-# print(connectedList)
-# print(nodes)
-# print(g)
-
-class Network():
+def readStations(filename):
     """
     
     """
+    stations = []
+    with open(filename, 'r', encoding='utf-8-sig') as inFile:
+        lines = inFile.readlines()
 
-    def __init__(self, id, name, connected):
-        self._idName = {}
-        self._idName[id] = name
+        for line in lines:
+            line = line.strip()
+            if line:
+                start, end = line.split(" - ")
+                stations.append((start, end))
+
+    return stations

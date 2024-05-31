@@ -1,10 +1,16 @@
-from NodesEdges import Edge, WeightedEdge
+# 2023-2024 Programacao 2 LTI
+# Grupo 31
+# 59348 Dmytro Umanskyi
+# 62228 Oujie Wu
 
 class Digraph:
     """
     
     """
     def __init__(self):
+        """
+        
+        """
         self._nodes = []
         self._edges = {}
 
@@ -17,33 +23,25 @@ class Digraph:
         else:
             self._nodes.append(node)
             self._edges[node] = []
-            # self._edges.append(Edge(node, ))
 
     def addEdge(self, edge):
         """
-        Edge is a WeightedEdge
+        
         """
         source = edge.getSource()
         destination = edge.getDestination()
         weight = edge.getWeight()
-        if not (source in self._nodes and destination in self._nodes):
-            raise ValueError("Node not in graph")
-        self._edges[source].append([destination, weight])
-        # self._edges.append()
+        if source not in self._nodes:
+            raise ValueError("Source not in graph")
+        if destination not in self._nodes:
+            raise ValueError("Destination not in graph")
+        self._edges[source].append((destination, weight))
 
     def childrenOf(self, node):
         """
         
         """
-        # for child in self._edges[node]:
-        #     return child[0]
         return self._edges[node]
-    
-    def weightOfEdge(self, node):
-        for child in self._edges[node]:
-            return child[1]
-        # return self._nodes[node][1]
-
     
     def hasNode(self, node):
         """
@@ -52,9 +50,15 @@ class Digraph:
         return node in self._nodes
     
     def getNodes(self):
+        """
+        
+        """
         return self._nodes
     
     def getEdges(self):
+        """
+        
+        """
         return self._edges
     
     def __str__(self):
@@ -64,7 +68,8 @@ class Digraph:
         result = ''
         for source in self._nodes:
             for destination, weight in self._edges[source]:
-                result = (f'{result} {source.getName()} -> {destination.getName()} with weight of {weight} \n')
+                result = (f'{result} {source.getName()} ->' +
+                          f'{destination.getName()} with weight of {weight} \n')
         return result[:-1]
     
     def __repr__(self):
@@ -72,15 +77,3 @@ class Digraph:
         
         """
         return self.__str__()
-        
-class Graph(Digraph):
-    """
-    
-    """
-    def addEdge(self, edge):
-        """
-        
-        """
-        Digraph.addEdge(self, edge)
-        reverse = Edge(edge.getDestination(), edge.getSource())
-        Digraph.addEdge(self, reverse)

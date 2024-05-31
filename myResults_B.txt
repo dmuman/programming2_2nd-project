@@ -1,0 +1,28 @@
+# Barreira - Curral das Freiras
+Barreira and Curral das Freiras do not communicate
+# Portela - Quatro Estradas
+36, Portela, Quatro Estradas
+43, Portela, Camacha, Poco da Neve, Quatro Estradas
+46, Portela, Camacha, Quatro Estradas
+# Santana - Pico do Areeiro
+Pico do Areeiro out of the network
+# Lombada - Monte
+Lombada and Monte do not communicate
+# Lombada - Lagoa do Vento
+7, Lombada, Rabacal, Lagoa do Vento
+# Marocos - Portela
+20, Marocos, Santo da Serra, Portela
+23, Marocos, Portela
+# Pico Ruivo - Poco da Neve
+Poco da Neve out of the network
+# Rabacal - Lombada
+4, Rabacal, Lombada
+# Ribeiro Frio - Ribeira Seca
+Ribeiro Frio and Ribeira Seca do not communicate
+# Funchal - Lombada
+10, Funchal, Lombada
+26, Funchal, Curral das Freiras, Lombada
+# Porto da Cruz - Santana
+13, Porto da Cruz, Poiso, Santana
+19, Porto da Cruz, Funchal, Santana
+23, Porto da Cruz, Ribeira Seca, Poiso, Santana
