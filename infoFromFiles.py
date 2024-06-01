@@ -9,21 +9,38 @@ from WeightedEdge import WeightedEdge
 
 def readFromNetworkFiles(filename):
     """
+    Reads the network file, that contains information
+    about all the existing stations 
+    (i.e. its ids, names and to which stations they 
+    are connected and the time ti travel between them)
+    Returns a graph object created with that information.
+
+    Requires:
+    filename is a string that represents the network file name and
+    has .txt at the end. The file itself is not empty
+    and contains a header (#Id, Name, Connected:)
+    Each station is like the following:
+    'Id, name, [(otherStationId, timeToTravelBetweenStations)]'
     
+    Ensures:
+    a Graph object is created with the nodes and edges,
+    where each node is equal to Node(Id, name) and 
+    each edge is a weighted edge that is equal to
+    WeightedEdge(sourceNode, destinationNode, time)
     """
-    graph = Graph()
+    graph = Graph() # initislizing Graph object, so the edges can be reversed
     nodes = {}
 
     with open(filename, 'r', encoding='utf-8-sig') as inFile:
         lines = inFile.readlines()
 
-        for line in lines[1:]:  # skip the header
+        for line in lines[1:]:  # skipping the header
             line = line.strip()
             if line:
-                linesInfo = line.split(", ", 2)  # split only on the first two commas
+                linesInfo = line.split(", ", 2)  # splitting only on the first two commas
                 if len(linesInfo) == 3:
                     id, name, connected = linesInfo
-                    connected = connected.strip("[]")  # remove the square brackets
+                    connected = connected.strip("[]")  # removing the square brackets
 
                     if id not in nodes:
                         node = Node(id, name)
@@ -37,7 +54,7 @@ def readFromNetworkFiles(filename):
                     if connected:
                         connections = connected.split("), (")
                         for connection in connections:
-                            connection = connection.strip("()")  # remove parentheses
+                            connection = connection.strip("()")  # removing parentheses
                             children, time = connection.split(", ")
                             time = int(time)
 
@@ -54,7 +71,21 @@ def readFromNetworkFiles(filename):
 
 def readStations(filename):
     """
+    Reads the stations file, that contains information
+    about stations the program need to find connection between. 
+    (i.e. its names(titles))
+    Returns a list that contains stations' names (titles)
+
+    Requires:
+    filename is a string that represents the stations file name and
+    has .txt at the end. The file itself is not empty
+    Each pair of stations' names is like the following:
+    'stationName - otherStationName'
     
+    Ensures:
+    a list containing tuples with the names of stations
+    with the next structure:
+    [(stationNameA - otherStationNameA), ..., (stationNameN - otherStationNameN)]
     """
     stations = []
     with open(filename, 'r', encoding='utf-8-sig') as inFile:

@@ -1,0 +1,19 @@
+# Lombada - Curral das Freiras
+18, Lombada, Funchal, Curral das Freiras
+18, Lombada, Curral das Freiras
+# Ribeira Seca - Porto da Cruz
+12, Ribeira Seca, Poiso, Porto da Cruz
+12, Ribeira Seca, Porto da Cruz
+30, Ribeira Seca, Poiso, Santana, Funchal, Porto da Cruz
+# Quatro Estradas - Barreira
+18, Quatro Estradas, Poco da Neve, Barreira
+18, Quatro Estradas, Barreira
+40, Quatro Estradas, Poco da Neve, Monte, Barreira
+# Camacha - Quatro Estradas
+16, Camacha, Poco da Neve, Quatro Estradas
+19, Camacha, Quatro Estradas
+30, Camacha, Campo do Pomar, Monte, Poco da Neve, Quatro Estradas
+# Camacha - Monte
+17, Camacha, Campo do Pomar, Monte
+17, Camacha, Monte
+17, Camacha, Poco da Neve, Monte
