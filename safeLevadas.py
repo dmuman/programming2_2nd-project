@@ -16,7 +16,16 @@ outputFile = os.path.join(here, argv[3])
 
 def findNodeByTitle(graph, title):
     """
-    
+    A function to find a Node by it's title in the given graph.
+    Return a node if found, None otherwise.
+
+    Requires:
+    graph is a Graph(),
+    title is a title of the Node() that is in the graph.
+
+    Ensures:
+    node if its title is found in the given graph,
+    None otherwise.
     """
     for node in graph.getNodes():
         if node.getTitle() == title:
@@ -25,7 +34,40 @@ def findNodeByTitle(graph, title):
 
 def safeLevadas(levadasFile, stationsFile, outputFile):
     """
+    The main function that runs the whole program. Uses all the previous
+    functions and classes methods. Writes a result file to the provided 
+    outpuFile name.
+    Creates a graph out of all the provided stations in levadasFile,
+    pairs of stations from the stationsFile and then finds the best pathes between them.
+    At max three pathes for each pair.
+    Can be executed from the file of from the console like that:
+    'python safeLevadas.py levadasFile stationsFile outputFile'
     
+    Requires:
+    levadasFile and stationsFile aren's empty.
+    levadasFile has the next structure:
+    #Id, Name, Connected
+    'Id', 'Name', [('otherId', 'time'), ...]
+    ...
+
+    stationsFile has the next structure
+    'StationA - StationB'
+    ...
+
+    Ensures:
+    outputFile with the provided name and with the
+    results of DFS computations.
+    It has the next structure:
+    (if the path is found)
+    # StartStation - EndStation
+    'time', 'path'
+    ...
+    (if stations don't communicate)
+    # StartStation - EndStation
+    'StartStation and EndStation do not communicate'
+    (if one of the stations are not in the graph)
+    # StartStation - EndStation
+    'EndStation out of the network'
     """
     graph = readFromNetworkFiles(levadasFile)
     stations = readStations(stationsFile)

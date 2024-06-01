@@ -15,5 +15,5 @@
 30, Camacha, Campo do Pomar, Monte, Poco da Neve, Quatro Estradas
 # Camacha - Monte
 17, Camacha, Campo do Pomar, Monte
-17, Camacha, Monte
 17, Camacha, Poco da Neve, Monte
+17, Camacha, Monte

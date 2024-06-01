@@ -1,0 +1,11 @@
+# Canical - Marocos
+8, Canical, Marocos
+# Quatro Estradas - Calheta
+Calheta out of the network
+# Canical - Santo da Serra
+19, Canical, Marocos, Santo da Serra
+40, Canical, Marocos, Portela, Santo da Serra
+# Monte - Barreira
+19, Monte, Poco da Neve, Barreira
+27, Monte, Barreira
+31, Monte, Poco da Neve, Quatro Estradas, Barreira

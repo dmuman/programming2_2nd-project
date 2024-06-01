@@ -14,7 +14,7 @@ Lombada and Monte do not communicate
 20, Marocos, Santo da Serra, Portela
 23, Marocos, Portela
 # Pico Ruivo - Poco da Neve
-Poco da Neve out of the network
+Pico Ruivo out of the network
 # Rabacal - Lombada
 4, Rabacal, Lombada
 # Ribeiro Frio - Ribeira Seca
