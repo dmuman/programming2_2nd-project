@@ -1,0 +1,13 @@
+#Id, Name, Connected:
+A, Tokyo, [(B, 9), (C, 5), (D, 7), (E, 14)]
+B, Yokohama, [(F, 9)]
+C, Shizuoka, [(D, 3), (E, 13)]
+D, Chiba, [(E, 10)]
+E, Nagoya, [(F, 7)]
+F, Akihabara, [(G, 6)]
+G, Osaka, []
+H, Kobe, [(I, 22), (J, 3), (K, 16), (L, 18)]
+I, Miyazaki, [(L, 8)]
+J, Kyoto City, [(I, 11)]
+K, Mount Fuji, []
+L, Hokkaido, []

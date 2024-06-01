@@ -1,0 +1,22 @@
+# Akihabara - Chiba
+17, Akihabara, Nagoya, Chiba
+23, Akihabara, Nagoya, Shizuoka, Chiba
+25, Akihabara, Yokohama, Tokyo, Chiba
+# Nagoya - Chiba
+10, Nagoya, Chiba
+16, Nagoya, Shizuoka, Chiba
+21, Nagoya, Tokyo, Chiba
+# Shizuoka - Tokyo
+5, Shizuoka, Tokyo
+10, Shizuoka, Chiba, Tokyo
+27, Shizuoka, Chiba, Nagoya, Tokyo
+# Kobe - Yokohama
+Kobe and Yokohama do not communicate
+# Akihabara - Osaka
+6, Akihabara, Osaka
+# Kyoto City - Hokkaido
+19, Kyoto City, Miyazaki, Hokkaido
+21, Kyoto City, Kobe, Hokkaido
+33, Kyoto City, Kobe, Miyazaki, Hokkaido
+# Miyazaki - Yokohama
+Miyazaki and Yokohama do not communicate

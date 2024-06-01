@@ -1,0 +1,10 @@
+#Id, Name, Connected:
+A, Tokyo, [(B, 12), (C, 7)]
+B, Yokohama, [(D, 4), (I, 6)]
+C, Shizuoka, [(D, 5)]
+D, Chiba, []
+E, Nagoya, [(F, 8), (G, 4)]
+F, Akihabara, [(G, 7)]
+G, Osaka, [(H, 10)]
+H, Kobe, []
+I, Miyazaki, []

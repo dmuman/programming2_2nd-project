@@ -1,0 +1,6 @@
+# Tokyo - Chiba
+12, Tokyo, Shizuoka, Chiba
+16, Tokyo, Yokohama, Chiba
+# Yokohama - Shizuoka
+9, Yokohama, Chiba, Shizuoka
+19, Yokohama, Tokyo, Shizuoka

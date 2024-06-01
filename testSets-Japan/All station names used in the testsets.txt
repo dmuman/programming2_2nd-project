@@ -1,0 +1,25 @@
+A. Tokyo
+B. Yokohama
+C. Shizuoka
+D. Chiba
+E. Nagoya
+F. Akihabara
+G. Osaka
+H. Kobe
+I. Miyazaki
+J. Kyoto City
+K. Mount Fuji
+L. Hokkaido
+M. Sendai
+N. Niigata
+O. Kanazawa
+P. Hiroshima Peace Memorial Museum
+Q. Nara Park
+R. Izumozaki Town
+S. Nagaoka 
+T. Mitsuke 
+U. Sanjo 
+V. Tagami Town
+
+!!!Some station names may not be recorded here because these stations do not exist. 
+The purpose is to test special situations, such as "out of the network" and "do not comunicate" !!!
