@@ -1,8 +1,0 @@
-# Tokyo - Osaka
-8, Tokyo, Shizuoka, Osaka
-10, Tokyo, Shizuoka, Nagoya, Osaka
-15, Tokyo, Chiba, Nagoya, Osaka
-23, Tokyo, Yokohama, Nagoya, Osaka
-25, Tokyo, Yokohama, Akihabara, Nagoya, Osaka
-# Akihabara - Tokyo
-25, Akihabara, Yokohama, Tokyo

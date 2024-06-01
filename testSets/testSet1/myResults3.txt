@@ -1,0 +1,19 @@
+# Hiroshima Peace Memorial Museum - Nara Park
+20, Hiroshima Peace Memorial Museum, Nara Park
+21, Hiroshima Peace Memorial Museum, Kanazawa, Nara Park
+# Hokkaido - Izumozaki Town
+14, Hokkaido, Izumozaki Town
+16, Hokkaido, Sendai, Izumozaki Town
+37, Hokkaido, Sendai, Niigata, Kanazawa, Izumozaki Town
+# Miyazaki - Mount Fuji
+19, Miyazaki, Mount Fuji
+20, Miyazaki, Kyoto City, Mount Fuji
+45, Miyazaki, Akihabara, Kyoto City, Mount Fuji
+# Akihabara - Miyazaki
+19, Akihabara, Kyoto City, Miyazaki
+20, Akihabara, Miyazaki
+35, Akihabara, Osaka, Kobe, Kyoto City, Miyazaki
+# Akihabara - Kobe
+19, Akihabara, Osaka, Kobe
+19, Akihabara, Kobe
+21, Akihabara, Kyoto City, Kobe

@@ -1,0 +1,13 @@
+# Tokyo - Yokohama
+9, Tokyo, Yokohama
+# Miyazaki - Chiba
+37, Miyazaki, Chiba
+48, Miyazaki, Kyoto City, Akihabara, Chiba
+49, Miyazaki, Akihabara, Chiba
+# Tokyo - Shizuoka
+21, Tokyo, Yokohama, Shizuoka
+45, Tokyo, Yokohama, Chiba, Shizuoka
+# Kobe - Mount Fuji
+22, Kobe, Kyoto City, Mount Fuji
+29, Kobe, Mount Fuji
+35, Kobe, Kyoto City, Miyazaki, Mount Fuji

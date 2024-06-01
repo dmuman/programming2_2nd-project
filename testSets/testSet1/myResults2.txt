@@ -1,0 +1,30 @@
+# Mount Fuji - Nara Park
+Mount Fuji and Nara Park do not communicate
+# Chiba - Miyazaki
+37, Chiba, Miyazaki
+48, Chiba, Akihabara, Kyoto City, Miyazaki
+49, Chiba, Akihabara, Miyazaki
+# Niigata - Kanazawa
+9, Niigata, Kanazawa
+30, Niigata, Sendai, Izumozaki Town, Kanazawa
+42, Niigata, Sendai, Hokkaido, Izumozaki Town, Kanazawa
+# Hiroshima Peace Memorial Museum - Kobe
+Hiroshima Peace Memorial Museum and Kobe do not communicate
+# Hiroshima Peace Memorial Museum - Mitsuke
+10, Hiroshima Peace Memorial Museum, Nagaoka, Mitsuke
+# Yokohama - Chiba
+23, Yokohama, Shizuoka, Chiba
+25, Yokohama, Chiba
+# Sendai - Kyoto City
+Sendai and Kyoto City do not communicate
+# Nagaoka - Hiroshima Peace Memorial Museum
+5, Nagaoka, Hiroshima Peace Memorial Museum
+# Nagoya - Hokkaido
+Nagoya and Hokkaido do not communicate
+# Kanazawa - Hiroshima Peace Memorial Museum
+11, Kanazawa, Hiroshima Peace Memorial Museum
+30, Kanazawa, Nara Park, Hiroshima Peace Memorial Museum
+# Izumozaki Town - Niigata
+17, Izumozaki Town, Sendai, Niigata
+22, Izumozaki Town, Kanazawa, Niigata
+29, Izumozaki Town, Hokkaido, Sendai, Niigata

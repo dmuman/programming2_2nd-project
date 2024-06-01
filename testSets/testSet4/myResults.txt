@@ -1,0 +1,6 @@
+# Tokyo - Niigata
+Niigata out of the network
+# Kyoto City - Sendai
+Kyoto City and Sendai do not communicate
+# Kanazawa - Hokkaido
+Hokkaido out of the network
